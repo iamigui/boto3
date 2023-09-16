@@ -1,0 +1,7 @@
+hay que hacer un script grande para poder:
+crear usuarios
+ver los usuarios que hay
+permisos de los usuarios
+eliminar usuarios
+
+Este script debe llevar números para elegir las opciones
