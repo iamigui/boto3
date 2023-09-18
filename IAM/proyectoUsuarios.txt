@@ -3,5 +3,7 @@ crear usuarios
 ver los usuarios que hay
 permisos de los usuarios
 eliminar usuarios
+usar grupos
 
 Este script debe llevar números para elegir las opciones
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/iam.html

@@ -10,6 +10,7 @@ def checkUser():
     try:
         print('Insert the name of the user: ')
         iam = boto3.client('iam')
+        global username
         username = input()
         username_encontrada = False
         paginator = iam.get_paginator('list_users')
@@ -32,6 +33,7 @@ def checkUser():
 def listPolicies():
         try:
             iam = boto3.client('iam')
+        #while True:
             policy_encontrada = False
             paginator = iam.get_paginator('list_policies')
             print('I need to know the ARN from the policy you look for...')
@@ -87,26 +89,11 @@ def listPolicies():
             print('An error occurred:', e)
             sys.exit(1)
 
-def attachPolicy(policy_arn, username):
-    try:
-        iam = boto3.client('iam')
-
-        response = iam.attach_user_policy(
-            UserName = username,
-            PolicyArn = policy_arn
-        )
-
-        print('The policy ' + policy_name + ' has been attached to the user: ' + username)
-    
-    except Exception as e:
-        print('An error occurred:', e)
-        sys.exit(1)
-
 def detachPolicy(arn, username):
     try:
         iam = boto3.client('iam')
 
-        response = iam.detack_user_policy(
+        response = iam.detach_user_policy(
             UserName = username,
             PolicyArn = policy_arn
         )
@@ -118,7 +105,7 @@ def detachPolicy(arn, username):
         sys.exit(1)
 
 if __name__ == "__main__":
-    print('This is a function to attach policies to users.\n')
+    print('This is a function to detach policies from users.\n')
     checkUser()
 
     listPolicies()
@@ -126,4 +113,4 @@ if __name__ == "__main__":
     print('Insert the policy ARN: ')
     policy_arn = input()
 
-    attachPolicy(policy_arn, username)
+    detachPolicy(policy_arn, username)
