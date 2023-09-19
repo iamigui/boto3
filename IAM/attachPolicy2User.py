@@ -27,7 +27,7 @@ def checkUser():
             sys.exit(1)
     
     except Exception as e:
-        print('An error occurred:', e)
+        print(Fore.RED +'An error occurred:', e)
 
 def listPolicies():
         try:
@@ -78,13 +78,13 @@ def listPolicies():
                             break
 
                 if not policy_encontrada:
-                    print('Unknown policy name.')
+                    print(Fore.RED +'Unknown policy name.')
 
             else:
-                print('\nNot valid option.')
+                print(Fore.RED +'\nNot valid option.')
 
         except Exception as e:
-            print('An error occurred:', e)
+            print(Fore.RED +'An error occurred:', e)
             sys.exit(1)
 
 def attachPolicy(policy_arn, username):
@@ -96,10 +96,10 @@ def attachPolicy(policy_arn, username):
             PolicyArn = policy_arn
         )
 
-        print('The policy ' + policy_name + ' has been attached to the user: ' + username)
+        print(Fore.GREEN + 'The policy ' + policy_name + ' has been attached to the user: ' + username)
     
     except Exception as e:
-        print('An error occurred:', e)
+        print(Fore.RED +'An error occurred:', e)
         sys.exit(1)
 
 def detachPolicy(arn, username):
@@ -111,10 +111,10 @@ def detachPolicy(arn, username):
             PolicyArn = policy_arn
         )
 
-        print('The policy ' + policy_name + ' has been detached from the user: ' + username)
+        print(Fore.GREEN + 'The policy ' + policy_name + ' has been detached from the user: ' + username)
     
     except Exception as e:
-        print('An error occurred:', e)
+        print(Fore.RED +'An error occurred:', e)
         sys.exit(1)
 
 if __name__ == "__main__":

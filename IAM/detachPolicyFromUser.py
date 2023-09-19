@@ -2,8 +2,6 @@ import boto3
 from colorama import init, Fore, Back, Style
 import sys
 
-#Falta añadir colores
-
 init(autoreset=True)
 
 def checkUser():
