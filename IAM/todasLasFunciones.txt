@@ -1,0 +1,89 @@
+general
+
+1. checkUser
+2. listPolicies
+3. attachPolicy
+4. detachPolicy
+5. createUser
+6. checkUser(2)
+7. createGroup
+8. addUserToGroup
+9. attachPolicyUserGroup
+10. createLoginProfile
+11. deleteUser
+12. deleteUserFromGroup
+13. createAccessKey
+14. updateAccessKey
+15. detachPolicyFromUserGroup
+16. allUsers
+17. updateUser
+
+
+
+Advanced:
+1. create_role
+2. create_policy
+3. attach_policy
+4. create_instance_profile
+5. add_role_to_iam_instance
+6. create_conditional_policies
+7. tag_users
+8. list_tags
+9. remove_tags
+10. list_amis
+11. create_ec2_with_instanceProfile
+
+
+Grupos a dividir:
+
+1. Users
+
+    1. checkUser
+    5. createUser
+    8. addUserToGroup
+    10. createLoginProfile
+    11. deleteUser
+    12. deleteUserFromGroup
+    16. allUsers
+    17. updateUser
+
+2. Groups
+
+    7. createGroup
+
+3. Access
+
+    13. createAccessKey
+    14. updateAccessKey
+
+4. Policies
+
+    2. listPolicies
+    3. attachPolicy
+    4. detachPolicy
+    9. attachPolicyUserGroup
+    15. detachPolicyFromUserGroup
+
+    2. create_policy
+    3. attach_policy
+    6. create_conditional_policies
+
+5. Roles 
+
+    1. create_role
+    5. add_role_to_iam_instance
+
+6. Tags
+
+    7. tag_users
+    8. list_tags
+    9. remove_tags
+
+7. EC2
+
+    10. list_amis
+    11. create_ec2_with_instanceProfile
+
+8. Instance Profile 
+
+    4. create_instance_profile
